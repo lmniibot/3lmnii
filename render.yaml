@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: BOT_TOKEN
+        value: <ضع توكن البوت هنا>
+      - key: DB_HOST
+        value: <مضيف قاعدة البيانات>
+      - key: DB_USER
+        value: <اسم المستخدم>
+      - key: DB_PASS
+        value: <كلمة المرور>
+      - key: DB_NAME
+        value: <اسم القاعدة>
+      - key: CHANNEL
+        value: https://t.me/اسم_القناة
